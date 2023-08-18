@@ -4,7 +4,6 @@ version = 0.1
 [default.deploy]
 [default.deploy.parameters]
 stack_name = "ec2-images-analysis"
-s3_bucket = "your-s3-bucket-name"
 region = "us-east-1"
 capabilities = "CAPABILITY_IAM"
 profile = "AWSAdministratorAccess-354458181052"

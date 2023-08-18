@@ -12,7 +12,7 @@ Resources:
       CodeUri: ./
       Environment:
         Variables:
-          TARGET_S3_BUCKET: 354458181052-cyclops-audit
+          TARGET_S3_BUCKET: your-s3-bucket-name
       Policies:
         - S3CrudPolicy:
-            BucketName: 354458181052-cyclops-audit
+            BucketName: your-s3-bucket-name
