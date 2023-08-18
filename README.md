@@ -30,7 +30,7 @@ cd cyclopsaudit
 
 ## Updating the Bucket Name
 
-Open the `template.yaml` file and replace `your-s3-bucket-name` with the name of the S3 bucket containing the file `describe-images.json`. This bucket will also store the output from the Lambda function.
+Open the both the `template.yaml` and `samconfig.toml` files and replace `your-s3-bucket-name` with the name of the S3 bucket containing the file `describe-images.json`. This bucket will also store the output from the Lambda function as well as the AWS SAM files.
 
 ## Building the Project
 
@@ -47,25 +47,11 @@ This command will download the necessary dependencies and prepare the build arti
 Deploy the Lambda function using the following command:
 
 ```bash
-sam deploy --guided --s3-bucket your-s3-bucket-name
+sam deploy
 ```
 
 Follow the on-screen instructions to complete the deployment. 
-This command will package and deploy the application to AWS, creating or updating the necessary resources. Here is an example:
-
-```bash
-	Stack Name [ec2-images-analysis]:
-	AWS Region [us-east-1]:
-	#Shows you resources changes to be deployed and require a 'Y' to initiate deploy
-	Confirm changes before deploy [Y/n]: y
-	#SAM needs permission to be able to create roles to connect to the resources in your template
-	Allow SAM CLI IAM role creation [Y/n]: y
-	#Preserves the state of previously provisioned resources when an operation fails
-	Disable rollback [y/N]: n
-	Save arguments to configuration file [Y/n]: y
-	SAM configuration file [samconfig.toml]:
-	SAM configuration environment [default]:
-```
+This command will package and deploy the application to AWS, creating or updating the necessary resources.
 
 ## Testing the Lambda Function
 
