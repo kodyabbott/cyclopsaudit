@@ -1,0 +1,14 @@
+version = 0.1
+
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "ec2-images-analysis"
+s3_bucket = "your-s3-bucket-name"
+region = "us-east-1"
+capabilities = "CAPABILITY_IAM"
+profile = "AWSAdministratorAccess-354458181052"
+resolve_s3 = true
+s3_prefix = "ec2-images-analysis"
+confirm_changeset = true
+image_repositories = []

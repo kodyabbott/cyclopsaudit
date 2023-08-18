@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Lambda function to analyze Amazon EC2 Images
+
+Resources:
+  AnalyzeEC2ImagesFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambda_handler
+      Runtime: python3.8
+      Timeout: 10
+      CodeUri: ./
+      Environment:
+        Variables:
+          TARGET_S3_BUCKET: 354458181052-cyclops-audit
+      Policies:
+        - S3CrudPolicy:
+            BucketName: 354458181052-cyclops-audit
